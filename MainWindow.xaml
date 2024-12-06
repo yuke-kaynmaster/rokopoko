@@ -1,0 +1,38 @@
+﻿<Window x:Class="rokopoko.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:rokopoko"
+        mc:Ignorable="d"
+        Title="Nadaj Przesyłkę" Height="450" Width="800">
+    <UniformGrid>
+        <GroupBox Header="Rodzaj przesyłki">
+            <StackPanel>
+                <RadioButton x:Name="pocz" IsChecked="True">Pocztówka</RadioButton>
+                <RadioButton x:Name="list" IsChecked="True">List</RadioButton>
+                <RadioButton x:Name="pacz" IsChecked="True">Paczka</RadioButton>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="Dane adresowe">
+            <StackPanel>
+            <TextBlock>Ulica z numerem</TextBlock>
+            <TextBox x:Name="ulicanum"></TextBox>
+            <TextBlock>Kod pocztowy</TextBlock>
+            <TextBox x:Name="kod"></TextBox>
+            <TextBlock>Miasto</TextBlock>
+            <TextBox x:Name="miasto"></TextBox>
+            </StackPanel>
+        </GroupBox>
+        <StackPanel>
+            <Button Click="Button_Click">Sprawdź Cenę</Button>
+            <StackPanel Orientation="Horizontal">
+                <Image Source="list.png"></Image>
+                <TextBlock FontWeight="Bold"
+                           FontSize="30"
+                    x:Name="cenaBloczek">Cena: </TextBlock>
+            </StackPanel>
+        </StackPanel>
+        <Button Click="Button_Click_1">Zatwierdź</Button>
+    </UniformGrid>
+</Window>
